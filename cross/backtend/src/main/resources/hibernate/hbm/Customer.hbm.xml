@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.dev.backend.to.Customer" table="customers"
+		catalog="sales">
+		<id name="code" column="customer_code" type="string">
+			<generator class="assigned" />
+		</id>
+		<property name="name" type="string">
+			<column name="customer_name" length="50" />
+		</property>
+		<property name="address" type="string">
+			<column name="customer_address" length="100" />
+		</property>
+		<property name="phone1" type="string">
+			<column name="customer_phone_1" length="15" />
+		</property>
+		<property name="phone2" type="string">
+			<column name="customer_phone_2" length="15" />
+		</property>
+		<property name="creditLimit" type="float">
+			<column name="customer_credit_limit" />
+		</property>
+		<property name="currentCredit" type="float">
+			<column name="customer_current_credit" />
+		</property>
+	</class>
+</hibernate-mapping>

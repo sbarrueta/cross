@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.dev.backend.to.Product" table="products"
+		catalog="sales">
+		<id name="code" column="product_code" type="string">
+			<generator class="assigned" />
+		</id>
+		<property name="description" type="string">
+			<column name="product_description" length="80" />
+		</property>
+		<property name="price" type="float">
+			<column name="product_price" />
+		</property>
+		<property name="quantity" type="int">
+			<column name="product_quantity" />
+		</property>
+		
+	</class>
+</hibernate-mapping>
